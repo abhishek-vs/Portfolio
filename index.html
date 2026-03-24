@@ -2,450 +2,503 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Abhishek V S | AI/ML Portfolio</title>
+  <title>Abhishek V S | Data Analyst | Power BI · AWS · Azure · GCP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
+  <meta name="description" content="Abhishek V S — Data Analyst with 4+ years in Banking & Insurance. Specializing in Power BI, AWS, Azure, GCP, ETL pipelines and enterprise data governance. Based in Richmond, VA." />
+  <meta property="og:title" content="Abhishek V S | Data Analyst | Power BI · AWS · Azure · GCP" />
+  <meta property="og:description" content="Data Analyst with 4+ years in Banking & Insurance. Specializing in Power BI, AWS, Azure, GCP, and enterprise data pipelines. Based in Richmond, VA." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abhishekvs.github.io" />
+  <meta property="og:image" content="https://abhishekvs.github.io/img/PI.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abhishek V S | Data Analyst" />
+  <meta name="twitter:description" content="Data Analyst with 4+ years in Banking & Insurance. Power BI · AWS · Azure · GCP." />
+  <meta name="twitter:image" content="https://abhishekvs.github.io/img/PI.jpeg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23f97316'/><text y='74' x='50' font-size='58' font-family='Arial' font-weight='900' fill='black' text-anchor='middle'>A</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- INTERACTIVE BACKGROUND -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- PRELOADER — Apple "Hello" screen -->
+  <div class="preloader" id="preloader">
+    <div class="hello-word" id="hello-word">Hello</div>
+    <div class="hello-lang" id="hello-lang">English</div>
+  </div>
+
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="brand">Abhishek V S</a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#papers">Papers</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#contact">Contact</a>
-        <a href="Files/resume12_1.pdf"
-           class="btn-dark"
-           download>
-        <i class="fa-solid fa-file-pdf"></i> Download Resume
-        </a>
-        </a>
-      </nav>
+  <nav class="navbar">
+    <div class="nav-pill">
+      <a href="#" class="nav-logo">AVS</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#expertise" class="nav-link">Expertise</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☀️</button>
+        <a href="Files/Abhishek_Resume1.pdf" class="nav-link nav-cta" target="_blank">Resume ↗</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-
-      <div class="hero-avatar-wrapper">
-        <!-- Put your own profile image in img/profile.jpg -->
-        <img src="img/profile.jpg" alt="Abhishek profile" class="hero-avatar" />
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="open-badge">
+        <span class="badge-dot"></span>
+        Open to Opportunities
       </div>
-
-      <h1 class="hero-name">Abhishek V S</h1>
-      <h2 class="hero-tagline">
-        M.S. CS @ VCU · AI/ML Engineer · Cloud Architect 
-      </h2>
-
-      <button class="hero-button" onclick="scrollToSection('about')">
-        Enter Portfolio
-      </button>
+      <p class="hero-tagline">Where raw data becomes strategic intelligence.</p>
+      <p class="hero-role-line">I'm a <span id="role-cycle" class="role-highlight">Data Analyst</span><span class="type-cursor">|</span></p>
+      <h1 class="hero-title">
+        Data That Drives<br>
+        <span class="accent">DECISIONS.</span>
+      </h1>
+      <p class="hero-sub">
+        4 years of experience in <span>Banking & Insurance</span> domains, building cloud-native data pipelines and BI solutions on <span>AWS · Azure · GCP</span>. Based in Richmond, VA.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View My Work →</a>
+        <a href="Files/Abhishek_Resume1.pdf" class="btn btn-ghost" download="Abhishek_VS_Resume.pdf">Download Resume ↓</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <main>
-
-    <!-- ABOUT -->
-    <section id="about" class="section section-light">
-      <div class="section-inner">
-        <div class="about-body">
-          <div class="about-photo">
-            <img src="img/profile.jpg" alt="Abhishek" />
-          </div>
-          <div class="about-text">
-            <h2>Abhishek Vajragattepalya Seetharamaiah</h2>
-            <h3>M.S. Computer Science · Virginia Commonwealth University</h3>
-
-            <p>
-              I'm a graduate student in Computer Science at Virginia Commonwealth
-              University with a focus on Artificial Intelligence, Machine Learning,
-              and Data Science.
-            </p>
-            <p>
-              I enjoy building end-to-end AI systems: from data preprocessing and feature
-              engineering to model training, evaluation, and deployment. Recent work includes
-              a content-based image retrieval system in MATLAB, a hotel-review exploration app
-              powered by LangGraph and Streamlit, and quantum optimization experiments with QAOA.
-            </p>
-
-            <h4>Education</h4>
-            <ul>
-              <li>
-                <strong>Virginia Commonwealth University</strong> – M.S. in Computer Science
-                (AI/ML focus), expected Dec 2025
-              </li>
-              <li>
-                <strong>Presidency University</strong> – B.Tech. in Information Science and Engineering
-              </li>
-            </ul>
-
-            <div class="social-links">
-              <a href="https://github.com/abhishekvs" target="_blank">GitHub</a>
-              <a href="https://www.linkedin.com/in/vs-abhishek" target="_blank">LinkedIn</a>
-              <a href="mailto:abhishekgowdru1020@gmail.com">Email</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- “Learn more” buttons -->
-        <div class="learn-more">
-          <h3>Learn more about my:</h3>
-          <div class="learn-buttons">
-            <button onclick="scrollToSection('skills')">Skills</button>
-            <button onclick="scrollToSection('projects')">Projects</button>
-            <button onclick="scrollToSection('papers')">Papers</button>
-            <button onclick="scrollToSection('certifications')">Certifications</button>
-            <button onclick="scrollToSection('timeline')">Work Experience</button>
-            <a href="Portfolio/Abhishek_VS_Resume.pdf" target="_blank" class="btn-dark">
-              <i class="fa-solid fa-file-pdf"></i> Resume
-            </a>
-          </div>
-        </div>
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Data Engineering & ETL</span><span class="sep">⚡</span>
+        <span>Power BI & DAX Analytics</span><span class="sep">⚡</span>
+        <span>Azure Data Factory</span><span class="sep">⚡</span>
+        <span>AWS (S3, Glue, Lambda)</span><span class="sep">⚡</span>
+        <span>GCP</span><span class="sep">⚡</span>
+        <span>Python & Machine Learning</span><span class="sep">⚡</span>
+        <span>Databricks</span><span class="sep">⚡</span>
+        <span>SAS · Hive · Impala</span><span class="sep">⚡</span>
+        <span>Teradata</span><span class="sep">⚡</span>
+        <span>Tableau & Looker</span><span class="sep">⚡</span>
+        <span>Data Governance</span><span class="sep">⚡</span>
+        <span>Informatica IDQ</span><span class="sep">⚡</span>
+        <span>Collibra & Erwin</span><span class="sep">⚡</span>
+        <span>Terraform · CI/CD</span><span class="sep">⚡</span>
+        <span>Predictive Modeling</span><span class="sep">⚡</span>
       </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section section-blue">
-      <div class="section-inner">
-        <h2>Skills</h2>
-        <p>Below are some of my key skills across programming, data, cloud, and tooling.</p>
-        <p class="muted">(Grouped by category; see my resume for more context.)</p>
-
-        <div class="skills-grid">
-          <!-- Programming & ML -->
-          <div class="skill-card">
-            <div class="skill-icon">💻</div>
-            <h3>Programming & Machine Learning</h3>
-            <p>
-              Strong foundation in software engineering and core ML frameworks.
-            </p>
-            <ul>
-              <li>Python, Java, C/C++, MATLAB, SQL</li>
-              <li>TensorFlow, PyTorch, scikit-learn</li>
-              <li>NumPy, Pandas</li>
-            </ul>
-          </div>
-
-          <!-- Data Science & Analytics -->
-          <div class="skill-card">
-            <div class="skill-icon">📊</div>
-            <h3>Data Science & Analytics</h3>
-            <p>
-              Hands-on experience analyzing real-world datasets and building models.
-            </p>
-            <ul>
-              <li>Exploratory Data Analysis (EDA), Feature Engineering</li>
-              <li>NLP, Neural Networks, Classical ML</li>
-              <li>Classification, Regression, Clustering</li>
-              <li>Recommender Systems, Image Processing</li>
-            </ul>
-          </div>
-
-          <!-- Databases & Data -->
-          <div class="skill-card">
-            <div class="skill-icon">🗄️</div>
-            <h3>Databases & Data Management</h3>
-            <p>
-              Comfortable working across relational and NoSQL data stores.
-            </p>
-            <ul>
-              <li>MySQL, PostgreSQL, MongoDB, Oracle</li>
-              <li>Advanced Database Systems</li>
-              <li>SQL querying & optimization</li>
-            </ul>
-          </div>
-
-          <!-- Cloud, DevOps & MLOps -->
-          <div class="skill-card">
-            <div class="skill-icon">☁️</div>
-            <h3>Cloud, DevOps & MLOps</h3>
-            <p>
-              Industry experience deploying and operating ML and data workloads in the cloud.
-            </p>
-            <ul>
-              <li>Google Cloud Platform (GCP), AWS (EC2, Lambda, DynamoDB)</li>
-              <li>Docker, Kubernetes, Cloud deployment</li>
-              <li>Git, GitHub, basic CI/CD practices</li>
-            </ul>
-          </div>
-
-          <!-- Tools, Frameworks & Domains -->
-          <div class="skill-card">
-            <div class="skill-icon">🛠️</div>
-            <h3>Tools, Frameworks & Domains</h3>
-            <p>
-              Ecosystem of libraries and tools I use for experimentation and visualization.
-            </p>
-            <ul>
-              <li>Jupyter, Tableau</li>
-              <li>Matplotlib, Seaborn</li>
-              <li>Streamlit, LangChain, LangGraph</li>
-              <li>OpenCV for computer vision</li>
-            </ul>
-          </div>
-
-          <!-- Additional Topics -->
-          <div class="skill-card">
-            <div class="skill-icon">⚛️</div>
-            <h3>Additional Topics</h3>
-            <p>
-              Broader foundation supporting my AI/ML work.
-            </p>
-            <ul>
-              <li>Advanced Algorithms & Data Structures</li>
-              <li>Knowledge Discovery & Data Mining</li>
-              <li>Quantum Computing fundamentals & QAOA basics</li>
-            </ul>
-          </div>
-        </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>Data Engineering & ETL</span><span class="sep">⚡</span>
+        <span>Power BI & DAX Analytics</span><span class="sep">⚡</span>
+        <span>Azure Data Factory</span><span class="sep">⚡</span>
+        <span>AWS (S3, Glue, Lambda)</span><span class="sep">⚡</span>
+        <span>GCP</span><span class="sep">⚡</span>
+        <span>Python & Machine Learning</span><span class="sep">⚡</span>
+        <span>Databricks</span><span class="sep">⚡</span>
+        <span>SAS · Hive · Impala</span><span class="sep">⚡</span>
+        <span>Teradata</span><span class="sep">⚡</span>
+        <span>Tableau & Looker</span><span class="sep">⚡</span>
+        <span>Data Governance</span><span class="sep">⚡</span>
+        <span>Informatica IDQ</span><span class="sep">⚡</span>
+        <span>Collibra & Erwin</span><span class="sep">⚡</span>
+        <span>Terraform · CI/CD</span><span class="sep">⚡</span>
+        <span>Predictive Modeling</span><span class="sep">⚡</span>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section section-light">
-      <div class="section-inner">
-        <h2>Projects</h2>
-        <p>Some of the projects I've worked on recently.</p>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img src="img/project-cbir.jpg" alt="CBIR project" />
-              <div class="project-overlay">
-                <h3>Content-Based Image Retrieval</h3>
-                <p>MATLAB · Image Features · Similarity Search</p>
-              </div>
-            </div>
-            <p class="project-text">
-              Built a CBIR system using 6-bit color code histograms and texture features
-              to retrieve visually similar images from a dataset. Implemented custom
-              feature extraction, distance metrics, and query-by-example search.
-            </p>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img src="img/project-hotel.jpg" alt="Hotel Explorer" />
-              <div class="project-overlay">
-                <h3>Hotel Explorer + AI Summarizer</h3>
-                <p>Python · LangGraph · Streamlit</p>
-              </div>
-            </div>
-            <p class="project-text">
-              Human-in-the-loop tool that summarizes hotel reviews and supports interactive
-              exploration using multi-agent workflows, style-guided responses, and review
-              history logging.
-            </p>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img src="img/project-qaoa.jpg" alt="QAOA" />
-              <div class="project-overlay">
-                <h3>QAOA for Vertex Cover</h3>
-                <p>Qiskit · Quantum Optimization</p>
-              </div>
-            </div>
-            <p class="project-text">
-              Implemented QAOA for vertex cover on small graphs, experimenting with depth,
-              penalty parameters, and optimizer settings. Compared quantum solutions against
-              classical baselines and analyzed trade-offs.
-            </p>
-          </article>
-        </div>
-
-        <div class="projects-footer">
-          <a href="https://github.com/abhishekvs" target="_blank" class="btn-dark">
-            <i class="fa-brands fa-github"></i> Visit my GitHub
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PAPERS -->
-    <section id="papers" class="section section-blue">
-      <div class="section-inner">
-        <h2>Papers & Reports</h2>
-        <p>Course projects and research-style reports.</p>
-
-        <div class="papers-list">
-          <div class="paper-item">
-            <h3>
-              Prototype: “Image-Based Classification for Skin Lesion Data”
-            </h3>
-            <p class="paper-meta">
-              Data Mining / Image Analysis · 2025 · VCU
-            </p>
-          </div>
-
-          <div class="paper-item">
-            <h3>
-              Prototype: “Quantum-Inspired Optimization with QAOA for Small Graphs”
-            </h3>
-            <p class="paper-meta">
-              Intro to Quantum Computing · 2024 · VCU
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section section-light">
-      <div class="section-inner">
-        <h2>Certifications</h2>
-        <p>Selected online courses and certifications.</p>
-
-        <ul class="cert-list">
-          <!-- Update these hrefs to match actual filenames in Portfolio/ -->
-          <li>
-            <a href="Files/Certificates/AWS Certified Cloud Practitioner.pdf" target="_blank">
-              AWS Cloud Practitioner – Licensed Certification
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/gcp-architecting.pdf" target="_blank">
-              Architecting with Google Cloud Platform
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/ml-using-python-tcs-ion.pdf" target="_blank">
-              Machine Learning using Python – TCS iON Internship
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/matlab-onramp.pdf" target="_blank">
-              MATLAB Onramp
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/python-essentials.pdf" target="_blank">
-              Python Essentials 01 &amp; 02
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/cyber-threat-management.pdf" target="_blank">
-              Cyber Threat Management &amp; Endpoint Security
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/network-defence.pdf" target="_blank">
-              Network Defence
-            </a>
-          </li>
-          <li>
-            <a href="Portfolio/generic-cyber-security.pdf" target="_blank">
-              Generic Online Training in Cyber Security
-            </a>
-          </li>
-        </ul>
-       
-      </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section id="timeline" class="section section-light">
-      <div class="section-inner">
-        <h2>Timeline</h2>
-        <p>A short summary of my academic and professional journey.</p>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">2024 – Present</div>
-              <h3>Graduate Student, VCU – Richmond, VA</h3>
-              <p>
-                Pursuing M.S. in Computer Science with focus on AI/ML, NLP, and data mining.
-                Working on projects in image analysis, quantum optimization, and ML systems.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">Jan 2023 – Jul 2024</div>
-              <h3>Cloud Architect – Quadra Systems .NET India Pvt Ltd, Bengaluru</h3>
-              <p>
-                Supported clients on GCP and AWS by resolving issues, optimizing deployments,
-                and improving overall system reliability, cost-efficiency, and security.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">Jul 2020 – Jan 2023</div>
-              <h3>Machine Learning Engineer – Capgemini Technology Services, Bengaluru</h3>
-              <p>
-                Built and maintained end-to-end ML pipelines using Python, TensorFlow, and
-                scikit-learn, deploying models for classification, prediction, and
-                recommendation use cases in production environments.
-              </p>
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="container about-grid">
+      <div class="about-image-col reveal">
+        <div class="about-image-wrap">
+          <img src="img/PI.jpeg" alt="Abhishek V S" class="about-photo" loading="lazy" />
+          <div class="about-badge">
+            <div class="badge-inner">
+              <span class="badge-num">AWS</span>
+              <span class="badge-label">Certified</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-dark">
-      <div class="section-inner">
-        <h2>Contact Me</h2>
-        <p>
-          Email: <a href="mailto:abhishekgowdru1020@gmail.com">abhishekgowdru1020@gmail.com</a>
+      <div class="about-text-col reveal">
+        <p class="section-label">About Me</p>
+        <h2 class="section-heading">Turning complexity<br>into <span class="accent">clarity.</span></h2>
+        <p class="about-desc">
+          I'm a Data Analyst with 4+ years of hands-on experience across <span style="color:var(--text)">Banking and Insurance</span> domains. From modernizing legacy warehouses to building cloud-native pipelines on AWS, Azure, and GCP, I help organizations move from scattered data to strategic insight.
         </p>
-        <div class="contact-grid">
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name *" required />
-            <input type="email" placeholder="Your Email *" required />
-            <input type="text" placeholder="Your Phone" />
-            <textarea placeholder="Your Message *" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+        <div class="current-work">
+          <span class="current-dot"></span>
+          <span class="current-text">Currently modernizing a legacy banking warehouse on <strong>Azure & AWS</strong> at ACNB Bank — processing 10M+ records daily.</span>
+        </div>
+        <p class="about-desc">
+          Currently at ACNB Bank driving a full-scale data warehouse modernization — processing <span style="color:var(--text)">10M+ records daily</span> across 25+ source systems. M.S. Computer Science from Virginia Commonwealth University.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10M+</span>
+            <span class="stat-label">Records / Day</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Cloud Platforms</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Domains</span>
+          </div>
+        </div>
+        <div class="about-links">
+          <a href="https://github.com/abhishekvs" target="_blank" class="btn btn-ghost">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/vs-abhishek" target="_blank" class="btn btn-ghost">LinkedIn ↗</a>
+          <a href="mailto:vsabhishekgowda@gmail.com" class="btn btn-ghost">Email ↗</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- EXPERTISE -->
+  <section id="expertise" class="section expertise-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Expertise</p>
+        <h2 class="section-heading">What I do <span class="accent">best.</span></h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item reveal">
+          <div class="service-num">01</div>
+          <div class="service-body">
+            <div class="service-name">Data Engineering & ETL</div>
+            <div class="service-desc">Building robust ETL pipelines and modernizing legacy data warehouses to scalable Azure Data Lake & AWS environments.</div>
+          </div>
+          <div class="service-tags">AWS S3 · Glue · Lambda · Azure Data Factory · GCP · Informatica IDQ/IICS · Teradata · SAS · Hive · Impala</div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-num">02</div>
+          <div class="service-body">
+            <div class="service-name">BI & Analytics</div>
+            <div class="service-desc">Developing interactive dashboards, KPI scorecards, and advanced DAX-based analytics to enable data-driven decision-making.</div>
+          </div>
+          <div class="service-tags">Power BI · DAX · RLS · Tableau · Looker · Excel Modeling</div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-num">03</div>
+          <div class="service-body">
+            <div class="service-name">AI/ML & Python</div>
+            <div class="service-desc">Supporting PoCs and automation of data workflows using Python, Pandas, NumPy, and scikit-learn across cloud-native ecosystems.</div>
+          </div>
+          <div class="service-tags">Python · scikit-learn · Databricks · Predictive Modeling</div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-num">04</div>
+          <div class="service-body">
+            <div class="service-name">Data Governance & Modeling</div>
+            <div class="service-desc">Leading metadata management and governance practices using Erwin and Collibra within enterprise Data Lake architectures.</div>
+          </div>
+          <div class="service-tags">Erwin · Collibra · Data Lineage · Metadata Management</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
+  <!-- PROJECTS -->
+  <section id="work" class="section work-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-heading">Projects I've <span class="accent">built.</span></h2>
+      </div>
+      <div class="projects-grid">
+        <a href="https://github.com/abhishekvs" target="_blank" class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/project-cbir.jpg" alt="Content Based Image Retrieval" loading="lazy" />
+            <div class="project-overlay">
+              <span>View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags-row">
+              <span class="tag">MATLAB</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+            <div class="project-title">Content Based Image Retrieval System</div>
+            <p class="project-desc">Retrieves visually similar images using color histograms & texture features — no manual tagging required.</p>
+          </div>
+        </a>
+        <a href="https://github.com/abhishekvs" target="_blank" class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/project-hotel.jpg" alt="Hotel Review AI System" loading="lazy" />
+            <div class="project-overlay">
+              <span>View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags-row">
+              <span class="tag">LangGraph</span>
+              <span class="tag">LLMs</span>
+            </div>
+            <div class="project-title">Hotel Review AI System</div>
+            <p class="project-desc">Multi-agent LangGraph pipeline that analyzes thousands of hotel reviews and generates structured sentiment reports.</p>
+          </div>
+        </a>
+        <a href="https://github.com/abhishekvs" target="_blank" class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="img/project-qaoa.jpg" alt="QAOA For Vertex Cover" loading="lazy" />
+            <div class="project-overlay">
+              <span>View Project ↗</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags-row">
+              <span class="tag">Qiskit</span>
+              <span class="tag">Quantum Computing</span>
+            </div>
+            <div class="project-title">QAOA For Vertex Cover</div>
+            <p class="project-desc">Implemented Quantum Approximate Optimization Algorithm to solve NP-hard graph problems on quantum hardware simulators.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section experience-section">
+    <div class="container exp-grid">
+      <div class="exp-col reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-heading">Where I've <span class="accent">worked.</span></h2>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-date">Aug 2025 – Present</span>
+            </div>
+            <div class="exp-role">Data Analyst</div>
+            <div class="exp-company">ACNB Bank · Gettysburg, PA</div>
+            <p class="exp-project">Legacy Data Warehouse → AWS & Azure Lakehouse Platform</p>
+            <ul class="exp-bullets">
+              <li>Built ETL pipelines via Azure Data Factory & SSIS ingesting <strong>10M+ records/day</strong> from 25+ source systems</li>
+              <li>Delivered Power BI dashboards for KPIs, loan performance, delinquency ratios & compliance metrics</li>
+              <li>Reduced reporting issues by <strong>40%</strong> collaborating in Agile/Scrum with Data Architects & Engineers</li>
+            </ul>
+            <div class="exp-tags">Azure · AWS · Power BI · Synapse · Databricks · SQL</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-date">Jan 2021 – Jul 2024</span>
+            </div>
+            <div class="exp-role">Data Analyst</div>
+            <div class="exp-company">Q-Dat IT Solutions · Karnataka, India</div>
+            <p class="exp-project">Insurance Data Platform Modernization & Cloud Data Integration</p>
+            <ul class="exp-bullets">
+              <li>Improved data accuracy from <strong>90% → 98%</strong> using SAS, Teradata, Hive, Impala, Python & SQL</li>
+              <li>Reduced reporting discrepancies by <strong>30%</strong> via Erwin & Collibra data models and business glossaries</li>
+              <li>Cut manual processing time by <strong>40%</strong> through Python-based PoCs and automated data workflows</li>
+            </ul>
+            <div class="exp-tags">AWS · GCP · SAS · Teradata · Hive · Collibra · Erwin · Terraform</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-col reveal">
+        <p class="section-label">Education</p>
+        <h2 class="section-heading">Where I've <span class="accent">studied.</span></h2>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-date">USA</span>
+            </div>
+            <div class="exp-role">M.S. Computer Science</div>
+            <div class="exp-company">Virginia Commonwealth University</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-date">India</span>
+            </div>
+            <div class="exp-role">B.E. Information Science</div>
+            <div class="exp-company">Presidency University</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS GRID -->
+  <section class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Technical Skills</p>
+        <h2 class="section-heading">Tools I <span class="accent">master.</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-category">☁️ Cloud Platforms</div>
+          <div class="skill-pills">
+            <span data-tooltip="Primary storage layer for insurance data pipelines">AWS S3</span><span>Glue</span><span>Lambda</span><span>Redshift</span>
+            <span>CloudFormation</span><span>CloudWatch</span><span>Azure</span>
+            <span>Synapse</span><span>GCP</span><span data-tooltip="Big data processing & ML at ACNB Bank">Databricks</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-category">📊 BI & Analytics</div>
+          <div class="skill-pills">
+            <span data-tooltip="Built KPI dashboards tracking loan performance & compliance">Power BI</span><span data-tooltip="Advanced calculated measures & row-level security">DAX</span><span>RLS</span>
+            <span>Tableau</span><span>Looker</span><span>Excel</span>
+            <span>KPI Scorecards</span><span>Power BI Service</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-category">💻 Languages & Scripting</div>
+          <div class="skill-pills">
+            <span>Python</span><span>SQL</span><span>SAS</span>
+            <span>Hive</span><span>Impala</span><span>Shell Scripting</span>
+            <span>Pandas</span><span>NumPy</span><span>scikit-learn</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-category">🔧 Data Engineering</div>
+          <div class="skill-pills">
+            <span>Informatica IDQ</span><span>IICS</span><span>Teradata</span>
+            <span>Azure Data Factory</span><span>SSIS</span><span>Airflow</span>
+            <span>Data Lake</span><span>Lakehouse</span><span>Hadoop</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-category">🏛️ Governance & Modeling</div>
+          <div class="skill-pills">
+            <span data-tooltip="Logical & physical data modelling for enterprise warehouses">Erwin</span><span data-tooltip="Enterprise data catalog & business glossary management">Collibra</span><span>Data Lineage</span>
+            <span>Metadata Mgmt</span><span>Business Glossary</span>
+            <span>Star Schema</span><span>Fact-Dimension</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-category">⚙️ DevOps & Agile</div>
+          <div class="skill-pills">
+            <span>Git</span><span>CI/CD</span><span data-tooltip="Infrastructure as code for AWS secure deployments">Terraform</span>
+            <span>Jenkins</span><span>CloudFormation</span><span>Jira</span>
+            <span>Rally</span><span>Agile/Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section certs-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Credentials</p>
+        <h2 class="section-heading">Certifications & <span class="accent">recognition.</span></h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-name">AWS Certified Cloud Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🌐</div>
+          <div class="cert-name">Associate Cloud Engineer</div>
+          <div class="cert-issuer">Google Cloud Platform</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🏗️</div>
+          <div class="cert-name">Architecting with Google Cloud</div>
+          <div class="cert-issuer">Google Cloud Platform</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-name">Machine Learning</div>
+          <div class="cert-issuer">DataCamp</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-name">AI For Everyone</div>
+          <div class="cert-issuer">DeepLearning.AI</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">💡</div>
+          <div class="cert-name">Introduction to Artificial Intelligence</div>
+          <div class="cert-issuer">IBM</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🐍</div>
+          <div class="cert-name">Python Programming for Everybody</div>
+          <div class="cert-issuer">University of Michigan</div>
+          <div class="cert-status">Active</div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">📊</div>
+          <div class="cert-name">Python & Machine Learning</div>
+          <div class="cert-issuer">Kaggle</div>
+          <div class="cert-status">Active</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
   <footer class="footer">
-    <p>© Abhishek V S 2025</p>
-    <div class="footer-links">
-      <a href="https://github.com/abhishekvs" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/vs-abhishek" target="_blank">LinkedIn</a>
+    <div class="container footer-inner">
+      <div class="footer-cta reveal">
+        <p class="section-label">Let's Connect</p>
+        <h2 class="footer-heading">Ready to turn your<br><span class="accent">data into decisions?</span></h2>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xdapnepq" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required autocomplete="off" />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required autocomplete="off" />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your message..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large form-submit">
+            <span class="submit-text">Send Message ↗</span>
+            <span class="submit-sent" style="display:none">Message Sent ✓</span>
+          </button>
+        </form>
+      </div>
+      <div class="footer-bottom reveal">
+        <div class="footer-left">
+          <div class="footer-copy">© Abhishek V S — 2026</div>
+          <div class="footer-location">📍 Richmond, VA &nbsp;·&nbsp; 📞 (804) 903-0123</div>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/abhishekvs" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/vs-abhishek" target="_blank">LinkedIn</a>
+          <a href="mailto:vsabhishekgowda@gmail.com">Email</a>
+        </div>
+      </div>
     </div>
   </footer>
-
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">▲</button>
 
   <script src="script.js"></script>
 </body>

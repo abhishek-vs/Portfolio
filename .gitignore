@@ -1,1 +1,5 @@
 .venv
+.claude/
+CLAUDE.md
+app.py
+AWS Cert/
